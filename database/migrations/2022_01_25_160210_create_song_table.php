@@ -13,13 +13,14 @@ class CreateSongTable extends Migration
      */
     public function up()
     {
-        Schema::create('song', function (Blueprint $table) {
+        Schema::create('songs', function (Blueprint $table) {
             $table->id();
 
             $table ->string('title');
-            $table ->string('album');
+            $table ->integer('duration') -> unsigned();
+            $table ->text('lyric') -> nullable();
             $table ->date('publication_date');
-            $table ->string('author');
+            $table ->tinyInteger('rating') -> unsigned() -> default(0);
 
             $table->timestamps();
         });

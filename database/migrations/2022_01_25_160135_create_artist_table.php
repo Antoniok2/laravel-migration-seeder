@@ -21,6 +21,9 @@ class CreateArtistTable extends Migration
             $table ->string('art_name') ->nullable();
             $table ->date('date_birthday');
             $table ->string('email');
+            $table ->date('dateOfBirth');
+            $table ->text('bio') -> nullable();
+
 
             $table->timestamps();
         });

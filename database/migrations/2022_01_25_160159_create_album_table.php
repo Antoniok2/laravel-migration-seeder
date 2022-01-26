@@ -17,8 +17,12 @@ class CreateAlbumTable extends Migration
             $table->id();
 
             $table ->string('album');
-            $table ->date('creation_album') ->nullable();
+            $table ->date('creation_album') -> nullable();
             $table ->date('publication_album');
+            $table ->bigInteger('views') -> unsigned() -> default(0);
+            $table ->bigInteger('sells') -> unsigned() -> default(0);
+            $table ->string('cover') -> nullable();
+
 
             $table->timestamps();
         });
