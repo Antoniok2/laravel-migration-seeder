@@ -13,7 +13,7 @@ class CreateArtistTable extends Migration
      */
     public function up()
     {
-        Schema::create('artist', function (Blueprint $table) {
+        Schema::create('artists', function (Blueprint $table) {
             $table->id();
 
             $table ->string('name');
@@ -36,6 +36,6 @@ class CreateArtistTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artist');
+        Schema::dropIfExists('artists');
     }
 }

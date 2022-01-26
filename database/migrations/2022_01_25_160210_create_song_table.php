@@ -33,6 +33,6 @@ class CreateSongTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('song');
+        Schema::dropIfExists('songs');
     }
 }
